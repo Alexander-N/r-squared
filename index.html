@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+  <head>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.css">
+      <script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+  </head>
+  <style>
+    body {
+      width: 1015px;
+      margin: 0px auto;
+      font-size: 1.2em;
+      font-family: Verdana, sans-serif;
+    }
+    svg:first-of-type .regressionLine {
+      stroke: darkgreen;
+    }
+    h1 {
+     text-align: center;
+     font-family: Georgia, serif;
+     font-weight: unset;
+    }
+    svg:first-of-type text.label {
+      text-decoration: overline;
+      fill: darkgreen;
+    }
+    line {
+      stroke: black;
+      stroke-width: 3px;
+    }
+    .regressionLine {
+      stroke: darkorange;
+    }
+    text.label {
+      fill: darkorange;
+    }
+    text.katex {
+      font-style: italic;
+    }
+    .average {
+      color: darkgreen;
+    }
+    .linear {
+      color: darkorange;
+    }
+    .katex {
+      font-size: 1.7em;
+    }
+    strong span {
+      font-weight: bold;
+    }
+    #MathJax-Element-8-Frame {
+      font-size: 120%;
+    }
+    #calculate-r-square {
+      text-align: center;
+      height: 1.7em;
+      margin: 1em;
+    }
+    #description {
+      width: 100%;
+      margin: 1.5em auto 1em auto;
+    }
+    .residuals {
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;
+    }
+  </style>
+  <body>
+    <h1>Coefficient of determination</h1>
+    <div id="main"></div>
+      <div id=description>
+        The better the <span class="linear">linear regression \(f\)</span> fits the data in
+        comparison to the <span class="average">average \(\bar{y}\)</span>, the closer \(R^2\) is to 1.
+      </div>
+      <table class="residuals">
+        <tr>
+          <td>
+            Squared residuals with respect to <span class="average">\(\bar{y}\)</span>
+          </td>
+          <td>
+            Squared residuals with respect to <span class="linear">\(f\)</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            \(\color{red}{SS_\text{tot}}=\sum_i (y_i - \color{darkgreen}{\bar{y}})^2\)
+          </td>
+          <td>
+            \(\color{blue}{SS_\text{res}}=\sum_i (y_i - \color{darkorange}{f_i})^2\)
+          </td>
+        </tr>
+      </table>
+
+    <script data-main="requireConfig.js" src="require.js"></script>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "module": "amd",
+        "jsx": "react"
+    },
+    "filesGlob": [
+        "**/*.tsx",
+        "**/*.ts"
+    ],
+    "atom": {
+        "rewriteTsconfig": false
+    }
+}
